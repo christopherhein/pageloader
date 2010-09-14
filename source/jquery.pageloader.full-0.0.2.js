@@ -1,12 +1,17 @@
-/*
- • jQuery Page Loader
- • http://christopherhein.com
- •
- • Copyright 2010, Christopher Hein
- • Free to use and abuse under the GPL license.
- • http://www.gnu.org/copyleft/gpl.html
- • 
- • June 2010
+/**
+* jQuery Page Loader 
+*
+* Easy to use ajax page loader
+*
+* Dual licensed under the MIT or GPL Version 2 licenses.
+*
+* @category   jQuery
+* @copyright  Copyright (c) 2010, Christopher Hein
+* @license    http://chrishe.in/licenses
+* @version    Release: 0.0.2:beta
+* @link       http://chrishe.in/
+* @github			http://github.com/christopherhein/pageloader
+*
 */
 
 (function($) {
