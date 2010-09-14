@@ -19,43 +19,51 @@
   	      title: 'jQuery Page Loader || Overview'
   	    });
   	    
-  	    $('#overview').click(function() {
+  	    $('.overview').click(function() {
   	      $(this).load_newpage({
   	        page: 'overview.html',
     	      parent: 'content-container',
     	      child: 'content',
-    	      title: 'jQuery Page Loader || Overview'
+    	      title: 'jQuery Page Loader || Overview',
+    	      height: 120
   	      });
+    	    $('nav a').removeClass('active');
   	      $(this).addClass('active');
   	    });
   	    
-  	    $('#required').click(function() {
+  	    $('.required').click(function() {
   	      $(this).load_newpage({
   	        page: 'required.html',
     	      parent: 'content-container',
     	      child: 'content',
-    	      title: 'jQuery Page Loader || Required'
+    	      title: 'jQuery Page Loader || Required',
+    	      height: 140
   	      });
+      	  $('nav a').removeClass('active');
           $(this).addClass('active');
   	    });
   	    
-  	    $('#files_deconstruction').click(function() {
+  	    $('.files_deconstruction').click(function() {
   	      $(this).load_newpage({
   	        page: 'files_deconstruction.html',
     	      parent: 'content-container',
     	      child: 'content',
-    	      title: 'jQuery Page Loader || File Deconstruction'
+    	      title: 'jQuery Page Loader || File Deconstruction',
+    	      height: 375
   	      });
+      	  $('nav a').removeClass('active');
   	      $(this).addClass('active');
   	    });
   	    
-  	    $('#code').click(function() {
+  	    $('.code').click(function() {
   	      $(this).load_newpage({
   	        page: 'code.html',
     	      parent: 'content-container',
     	      child: 'content',
-    	      title: 'jQuery Page Loader || code'
+    	      title: 'jQuery Page Loader || code',
+    	      height: 970
   	      });
+      	  $('nav a').removeClass('active');
     	    $(this).addClass('active');
   	    });
   	    
@@ -68,10 +76,10 @@
     <div class="container">
       <h1>jQuery Page Loader</h1>
       <nav>
-        <a id="overview" href="#/overview">Overview</a>
-        <a id="required" href="#/required">Requried</a>
-        <a id="files_deconstruction" href="#/files_deconstruction">Files</a>
-        <a id="code" href="#/code">Code</a>
+        <a class="overview" href="#/overview">Overview</a>
+        <a class="required" href="#/required">Requried</a>
+        <a class="files_deconstruction" href="#/files_deconstruction">Files</a>
+        <a class="code" href="#/code">Code</a>
       </nav>
       
       <div id="content-container">
@@ -81,7 +89,7 @@
       </div>
       
       <footer>
-        
+        <small>© Chris Hein 2010. <a href="http://christopherhein.com">Chris Hein</a></small>
       </footer>
     </div>
   </body>

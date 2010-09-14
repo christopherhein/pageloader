@@ -1,1 +1,57 @@
 <h2>Code</h2>
+<p>
+  Alright finish it up. All you need to do it link the two Javascript files, by placing this in the &lt;head&gt;:
+  <br/>
+  <code>
+  	&lt;script src=&quot;js/jquery.min-1.4.2.js&quot;&gt;&lt;/script&gt;<br />
+  	&lt;script src=&quot;js/jquery.pageloader.min-0.0.2.js&quot;&gt;&lt;/script&gt;
+  </code>
+</p>
+
+<p>
+  Now for your content code in the index.html page, you need to place this where ever the content files that you created on files page should be loaded into:
+  <code>
+    &lt;div id=&quot;content-container&quot;&gt;<br />
+            &lt;div class=&quot;content&quot;&gt;<br />
+              <br />
+            &lt;/div&gt;<br />
+          &lt;/div&gt;
+  </code>
+</p>
+
+<p>
+  Now that the files are linked correctly and the content divs are in place you can than code out your pages for the first initial page, something like home.html, call the jQuery function (load_page) this will load up the content as your initial page loads with no transition. it should look like this:
+  <code>
+    $('body').load_page({<br />
+      page: 'overview.html',<br />
+      parent: 'content-container',<br />
+      child: 'content',<br />
+      title: 'jQuery Page Loader || Overview'<br />
+    });
+  </code>
+  <br/>
+  Now as you can see your page link should be sent in the page parameter, and than set a title for what the title tag should read*
+  <br/><br/>
+  <small>* to use this feature, add "id='pg_title'" to the title tag in the head of the document</small>
+</p>
+
+<p>
+  So thats all working now, and now you want to make it even better with the transitions on every page load well, your in luck. each one of you navigation items now needs a jQuery function that corresponds to it's request, this will like very similar to the last function but wrapped in a click function like this:
+  <code>
+    $('.required').click(function() {<br />
+      $(this).load_newpage({<br />
+        page: 'required.html',<br />
+	      parent: 'content-container',<br />
+	      child: 'content',<br />
+	      title: 'jQuery Page Loader || Required',<br />
+	      height: 100<br/>
+      });<br />
+    });
+  </code>
+  <br/><br/>
+  just make sure you adjust all the heights if you pages have different page heights.<br/>
+  <br/>
+  Awesome right?<br/>
+  <br/>
+  Thanks so much I hope you enjoyed it.
+</p>

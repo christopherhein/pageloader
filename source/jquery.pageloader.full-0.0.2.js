@@ -26,6 +26,7 @@
       parent:     "content",
       child:     "container",
 			title:      "Nothing to see here",
+			height: 		100,
     }, options);
     
     var elem = $(this);
@@ -39,6 +40,9 @@
           cache: false,
           url: settings.page,
           success: function(data) {
+						$('#'+settings.parent).animate({height: settings.height+'px'}, 500, function(){
+							
+						});
             $('#'+settings.parent).append('<div class="'+settings.child+'"><div>');
             $('#'+settings.parent+' .'+settings.child).html(data);
           }
